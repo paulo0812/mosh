@@ -333,9 +333,11 @@ string Connection::recv( void )
       if ( (remote_addr.sin_addr.s_addr != packet_remote_addr.sin_addr.s_addr)
 	   || (remote_addr.sin_port != packet_remote_addr.sin_port) ) {
 	remote_addr = packet_remote_addr;
+	/*
 	fprintf( stderr, "Server now attached to client at %s:%d\n",
 		 inet_ntoa( remote_addr.sin_addr ),
 		 ntohs( remote_addr.sin_port ) );
+	*/
       }
     }
   }
